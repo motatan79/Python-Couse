@@ -1,4 +1,4 @@
-s = 'America'
+'''s = 'America'
 for i in s:
     print(i)
     print(s.index(i))
@@ -31,7 +31,7 @@ lista2 = [46246,46253,46256,46258,46259,46265,46270,46279,46281,46302,46309,4631
 
 print(set(lista1) == set(lista2))
 
-'''def print_full_name(first, last):
+#def print_full_name(first, last):
     print(first_name)
     print(last_name)# Write your code here
     print("Hello {} {}! You just delved into python.".format(first, last))
@@ -39,7 +39,7 @@ print(set(lista1) == set(lista2))
 if __name__ == '__main__':
     first_name = input()
     last_name = input()
-    print_full_name(first_name, last_name)'''
+    print_full_name(first_name, last_name)
 
 hungry = False
 
@@ -220,9 +220,112 @@ from random import randint
 
 print(randint(0, 100))
 
-'''# Input function
+# Input function
 result = int(input('Enter a number here: '))
 print(result)'''
 
+
+def diagonal_sum(a):
+    b = a[::-1]
+
+    print(abs(sum([a[a.index(i)][a.index(i)] for i in a]) - sum([b[b.index(i)][b.index(i)] for i in b])))
+
+
+a = [[11, 2, 4], [4, 5, 6], [10, 8, -12]]
+diagonal_sum(a)
+
+
+a = [63, 25, 73, 1, 98, 73, 56, 84, 86, 57, 16, 83, 8, 25, 81, 56, 9, 53, 98, 67, 99, 12, 83, 89, 80, 91, 39, 86, 76,
+     85, 74, 39, 25, 90, 59, 10, 94, 32, 44, 3, 89, 30, 27, 79, 46, 96, 27, 32, 18, 21, 92, 69, 81, 40, 40, 34, 68, 78,
+     24, 87, 42, 69, 23, 41, 78, 22, 6, 90, 99, 89, 50, 30, 20, 1, 43, 3, 70, 95, 33, 46, 44, 9, 69, 48, 33, 60, 65, 16,
+     82, 67, 61, 32, 21, 79, 75, 75, 13, 87, 70, 33]
+
+s = [a.count(i) for i in range(101)]
+print(s)
+
+
+
+n = 35
+print(n / 2)
+lista = []
+while (n / 2) > 0:
+    print(n)
+    if n % 2 == 0:
+        print(n%2)
+        lista.append(0)
+    elif n % 2 == 1:
+        lista.append(1)
+    n = n // 2
+print(lista)
+
+#lista2 = [1,0,1,1,0,1,1,1,1,0,1,1,1,1,1]
+#lista3 = lista2[::-1]
+
+lista2 = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0]
+lista3 = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0][::-1]
+print(lista3)
+lista4 = [2**x for x in range(len(lista2))]
+print(lista4)
+product = [x*y for x,y in zip(lista4,lista3)]
+print(sum(product))
+
+a = '1'
+print(a + '0')
+c = 1
+while c < 33:
+    a = a + '0'
+    c = len(a) + 1
+
+
+s = list('10000000000000000000000000000000')
+print(s)
+
+
+def flippingBits(n):
+    # Write your code here
+
+    lista = []
+    while (n / 2) > 0:
+        print(n)
+        if n % 2 == 0:
+            print(n % 2)
+            lista.append(0)
+        elif n % 2 == 1:
+            lista.append(1)
+        n = n // 2
+    print(lista)
+    lista9 = [str(i) for i in lista][::-1]
+
+    a = "".join(lista9)
+    c = 1
+    while c < 33:
+        a = '0' + a
+        c = len(a) + 1
+    print(a)
+    print(len(a))
+    lista1 = []
+    for i in list(a):
+        if i == '0':
+            lista1.append('1')
+        elif i == '1':
+            lista1.append('0')
+        else:
+            lista1.append(i)
+    print(lista1)
+    print(len(lista1))
+
+    lista3 = [int(x) for x in lista1]
+    print(lista3)
+    print(len(lista3))
+    lista4 = [2**x for x in range(len(lista1))][::-1]
+    print(lista4)
+    print(len(lista4))
+    lista5 = [x * y for x, y in zip(lista3, lista4)]
+    print(lista5)
+
+    print(sum(lista5))
+
+
+flippingBits(2672014)
 
 

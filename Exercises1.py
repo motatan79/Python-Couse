@@ -252,6 +252,7 @@ palindrome(s)
 
 s = 'nurses run'
 palindrome(s)
+
 # Write a Python function to check whether a string is pangram or not.
 # (Assume the string passed in does not have any punctuation)
 
@@ -265,3 +266,4 @@ def ispangram(str1, alphabet=string.ascii_lowercase):
     return phrase == alphabet
 
 ispangram("The quick brown fox jumps over the lazy dog")
+
