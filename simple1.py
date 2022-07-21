@@ -89,3 +89,13 @@ mixedup_list = shuffle_list(mylist)
 guess = player_guess()
 # Check guess
 check_guess(mixedup_list, guess)
+
+# Example
+# s = [2,2,1,3,2]
+# d = 4
+# m = 2
+# Lily wants to find segments summing to Ron's birth day,  with a length equalling his birth month, .
+# In this case, there are two segments meeting her criteria:  and .
+
+for i in s:
+    a
